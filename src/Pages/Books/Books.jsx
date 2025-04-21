@@ -7,8 +7,6 @@ const Books = ({allBooks}) => {
     // },[])
 
     // const booksPromise = fetch('booksData.json').then((res)=> res.json())
-    
-    console.log(allBooks)
 
     return (
         
@@ -20,7 +18,7 @@ const Books = ({allBooks}) => {
             allBooks.map((singleBook)=> <Book key={singleBook.bookId} singleBook={singleBook}></Book>)
            }
         </div>
-        
+
         </>
     );
 };
