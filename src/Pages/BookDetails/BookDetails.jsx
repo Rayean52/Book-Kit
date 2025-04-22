@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
+import { setToDB } from '../../Utility/Utility';
 
 const BookDetails = () => {
     let { id } = useParams();
@@ -9,6 +10,10 @@ const BookDetails = () => {
     const eachBook = bookData.find((book) => book.bookId === apiId);
 
     const { bookName, image, review, author } = eachBook;
+
+    const handleMarkAsRead = (id) => {
+        setToDB(id)
+    }
 
     return (
         <div>
@@ -25,7 +30,7 @@ const BookDetails = () => {
                         <p className="py-6">
                            <span className='text-xl font-bold'>Review : </span> {review}
                         </p>
-                        <button className="btn btn-primary mr-3">Read</button>
+                        <button onClick={()=> handleMarkAsRead(id)} className="btn btn-primary mr-3">Mark As Read</button>
                         <button className="btn btn-primary">Wishlist</button>
                     </div>
                 </div>

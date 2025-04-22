@@ -33,7 +33,7 @@ return (
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn btn-primary">Button</a>
+                <a className="btn btn-primary">Sign up</a>
             </div>
         </div>
     </div>
